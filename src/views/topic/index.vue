@@ -1,12 +1,12 @@
 <template>
-  <div id="app">
-
+  <div class="topic page">
+    <p>topic</p>
   </div>
 </template>
 
 <script>
 export default {
-
+  name: 'topic-page'
 }
 </script>
 
