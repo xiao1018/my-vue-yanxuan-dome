@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import utilts from './utils'
 
+import 'swiper/swiper-bundle.min.css'
 Vue.use(utilts)
 
 Vue.config.productionTip = false

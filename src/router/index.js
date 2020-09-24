@@ -19,8 +19,8 @@ export default new Router({
     topicRoute,
     mineRoute,
     {
-      path: '/**',
-      component: () => import('../common/not-find.vue')
+      path: '**',
+      redirect: '/home'
     }
   ]
 })
