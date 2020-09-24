@@ -6,6 +6,7 @@ import utilts from './utils'
 
 // css
 import 'vant/lib/icon/local.css'
+import 'swiper/dist/css/swiper.min.css'
 
 Vue.use(utilts)
 

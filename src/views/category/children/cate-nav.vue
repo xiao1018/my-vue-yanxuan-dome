@@ -1,13 +1,13 @@
 <template>
   <div class="cate-nav">
-    <scroll>
+    <app-scroll :style="{height:data.length*50+'px'}">
       <ul>
         <li v-for="(item,index) in data"
             :class="{active:index===value}"
             @click="navItemAction(index)"
             :key="item.id">{{item.name}}</li>
       </ul>
-    </scroll>
+    </app-scroll>
   </div>
 </template>
 
@@ -27,14 +27,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wrapper {
+.wrapper-scroll {
   width: 80px;
-  height: 600px;
   position: absolute;
-  top: 44px;
+  top: 0;
   left: 0;
   ul {
     padding-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    direction: column;
     li {
       box-sizing: border-box;
       width: 80px;

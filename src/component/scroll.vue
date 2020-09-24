@@ -1,7 +1,7 @@
 <template>
-  <div class="wrapper"
+  <div class="wrapper-scroll"
        ref="scroll">
-    <div class="wrapper-centent">
+    <div class="scroll">
       <slot />
     </div>
   </div>
@@ -10,12 +10,21 @@
 <script>
 import BScroll from 'better-scroll'
 export default {
-  name: 'scroll',
+  name: 'app-scroll',
   mounted () {
     /* eslint-disable no-new */
-    new BScroll(this.$refs.scroll, {
+    const scroll = new BScroll(this.$refs.scroll, {
       click: true
+    })
+    scroll.on('scrollStart', () => {
+      scroll.refresh()
     })
   }
 }
 </script>
+
+<style lang="scss">
+.wrapper-scroll {
+  overflow: hidden;
+}
+</style>
