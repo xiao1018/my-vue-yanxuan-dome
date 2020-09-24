@@ -56,23 +56,8 @@
 
 <script>
 import { mapState } from 'vuex'
-import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 export default {
   name: 'top-content',
-  components: {
-    Swiper,
-    SwiperSlide
-  },
-  data () {
-    return {
-      swiperOptions: {
-        notNextTick: true,
-        autoplay: true,
-        speed: 1000,
-        loop: true
-      }
-    }
-  },
   computed: {
     ...mapState({
       banner: state => state.home.banner,

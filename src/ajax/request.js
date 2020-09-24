@@ -1,27 +1,6 @@
 import axios from 'axios'
 import api from './api'
 
-<<<<<<< HEAD
-function get (url) {
-  return new Promise((resolve, reject) => {
-    axios.get(url, {
-      baseURL: api.HOST
-    })
-      .then((response) => resolve(response))
-      .catch((error) => reject(error))
-  })
-}
-
-function post (url, param) {
-  const data = param || {}
-  return new Promise((resolve, reject) => {
-    axios.post(url, {
-      data,
-      baseURL: api.HOST
-    })
-      .then((response) => resolve(response))
-      .catch((error) => reject(error))
-=======
 function handleParam (param) {
   if (!param) {
     return ''
@@ -47,15 +26,9 @@ function get (url, param) {
     })
       .then(data => resolve(data))
       .catch(error => reject(error))
->>>>>>> 525dfd4558e62639422d3301ed3a7d0f9d3d5637
   })
 }
 
 export default {
-<<<<<<< HEAD
-  get,
-  post
-=======
   get
->>>>>>> 525dfd4558e62639422d3301ed3a7d0f9d3d5637
 }
